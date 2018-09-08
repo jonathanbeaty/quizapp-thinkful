@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="youtube.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
         crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" rel="stylesheet" />
 
 
 </head>
@@ -18,21 +19,19 @@
         <h1>Youtube API</h1>
     </header>
 
-    <main role="main">
+    <section class="" role="region">
+        <form action="" class="youtube-search-form">
+            <div class="form-row">
+                <label for="search">Search Videos</label>
+                <input class="input-field" type="text" id="name" placeholder="i.e. The Big Lewboski Scene">
+                <button type="submit" class="button">Search</button>
+            </div>
+        </form>
+    </section>
 
-        <section class="" role="region">
-            <form action="" class="youtube-search-form">
-                <div class="form-row">
-                    <label for="search">Search Videos</label>
-                    <input class="input-field" type="text" id="name" placeholder="i.e. The Big Lewboski Scene">
-                    <button type="submit" class="button">Search</button>
-                </div>
-            </form>
-        </section>
+    <main role="main" class="js-output" aria-live="assertive">
 
-        <div class="search-results-container">
-
-        </div>
+    </main>
 
     </main>
 
@@ -42,6 +41,8 @@
     </footer>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
 <script src="js/youtubeAjax.js"></script>
 
 </html>
