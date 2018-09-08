@@ -31,7 +31,7 @@ function renderResult(result) {
 
 function displayYouTubeSearchData(data) {
     const results = data.items.map((item, index) => renderResult(item));
-    $('.search-results-container').append(results);
+    $('.js-output').append(results);
 }
 
 function watchSubmit() {
@@ -44,6 +44,18 @@ function watchSubmit() {
         queryTarget.val("");
         getDataFromApi(query, displayYouTubeSearchData);
     });
+}
+
+function showErr(err) {
+    const outputElem = $('.js-output');
+
+    const errMsg = (
+        `<p>We couldn't find a user with that screenname!`
+    );
+
+    outputElem
+        .prop('hidden', false)
+        .html(errMsg);
 }
 
 $(watchSubmit);
